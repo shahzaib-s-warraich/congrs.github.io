@@ -52,14 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://dill-lab.github.io">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
     </div>
-
   </div>
 </nav>
 
@@ -163,7 +156,7 @@
 </section>
 
 
-<!-- Figures Section -->
+<!-- Method Overview Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -176,9 +169,9 @@
     <div class="columns is-centered" style="margin-top: 20px;">
       <div class="column is-full">
         <div class="content has-text-centered">
-          <img src="./static/images/1.png" alt="ConGrs Method Overview" style="max-width: 100%; height: auto;"/>
-          <p class="has-text-centered" style="margin-top: 10px;">
-            <strong>Figure 1:</strong> Overview of the ConGrs framework for graph-based response synthesis.
+          <img src="./static/images/1.png" alt="Consensus Graphs (CONGRS)" style="max-width: 100%; height: auto;"/>
+          <p class="has-text-justified" style="margin-top: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
+            <strong>Figure 1:</strong> Consensus Graphs (CONGRS) capture the variation in a set of sampled LM responses. A CONGR is a weighted DAG of: consensus nodes for text spans present in all responses and disagreement nodes for lexical differences between responses. A node's weighted degree represents the fraction of responses which contain the information in that node. In the above example task of generating factual biographies from 3 sampled responses, disagreement nodes with lower weighted degree might indicate possible hallucinations. For this reason, none of the information in the disagreement nodes is included in the final synthesized response.
           </p>
         </div>
       </div>
@@ -188,9 +181,9 @@
     <div class="columns is-centered" style="margin-top: 40px;">
       <div class="column is-full">
         <div class="content has-text-centered">
-          <img src="./static/images/2.png" alt="ConGrs Results" style="max-width: 100%; height: auto;"/>
-          <p class="has-text-centered" style="margin-top: 10px;">
-            <strong>Figure 2:</strong> Experimental results showing performance improvements across different tasks.
+          <img src="./static/images/2.png" alt="Consensus decoding and Guided self-verification" style="max-width: 100%; height: auto;"/>
+          <p class="has-text-justified" style="margin-top: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
+            <strong>Figure 2:</strong> Consensus decoding (left) uses a CONGR to combine text present in many responses. Guided self-verification (right) uses a CONGR to localize possible errors in reasoning chains.
           </p>
         </div>
       </div>
@@ -198,7 +191,33 @@
 
   </div>
 </section>
-<!--/ Figures Section -->
+<!--/ Method Overview Section -->
+
+
+<!-- Results Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results</h2>
+      </div>
+    </div>
+
+    <!-- Figure 3 -->
+    <div class="columns is-centered" style="margin-top: 20px;">
+      <div class="column is-full">
+        <div class="content has-text-centered">
+          <img src="./static/images/3.png" alt="FActScore vs Number of True Claims" style="max-width: 100%; height: auto;"/>
+          <p class="has-text-justified" style="margin-top: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
+            <strong>Figure 3:</strong> Consensus decoding with CONGRS achieves the best trade-off between FActScore (the fraction of a response's claims that are true) and the number of true claims provided. Up and to the right is better. τ is the selection threshold for consensus decoding. Θ is the analogous parameter for the ASC baseline. Top row: Biography factuality. Bottom row: PopQA.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--/ Results Section -->
 
 
 <section class="section" id="BibTeX">
